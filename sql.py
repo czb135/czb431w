@@ -15,25 +15,26 @@ c.execute('''CREATE TABLE Users (
 c.execute("drop table Buyers")
 c.execute('''CREATE TABLE Buyers (
   email         CHAR(40)     NOT NULL,
-  firstName      CHAR(32)     NOT NULL,
-  lastName      CHAR(32)     NOT NULL,
+  first_name      CHAR(32)     NOT NULL,
+  last_name      CHAR(32)     NOT NULL,
   gender      CHAR(32)     NOT NULL,
+  age       CHAR(32)    NOT NULL,
   home_address_id      CHAR(32)     NOT NULL
 );''')
 
 c.execute("drop table Credit_Cards")
 c.execute('''CREATE TABLE Credit_Cards (
-  Credit_Card_number         CHAR(40)     NOT NULL,
+  credit_card_num         CHAR(40)     NOT NULL,
   card_code      CHAR(32)     NOT NULL,
   expire_month      CHAR(32)     NOT NULL,
   expire_year      CHAR(32)     NOT NULL,
-  cart_type      CHAR(32)     NOT NULL,
+  card_type      CHAR(32)     NOT NULL,
   Owner_email   CHAR(32)      NOT NULL
 );''')
 
 c.execute("drop table Address")
 c.execute('''CREATE TABLE Address (
-  Address_id         CHAR(40)     NOT NULL,
+  address_id         CHAR(40)     NOT NULL,
   zipcode      CHAR(32)     NOT NULL,
   street_num      CHAR(32)     NOT NULL,
   street_name      CHAR(32)     NOT NULL
@@ -41,8 +42,9 @@ c.execute('''CREATE TABLE Address (
 
 c.execute("drop table Zipcode_Info")
 c.execute('''CREATE TABLE Zipcode_Info (
-  Zipcode         CHAR(40)     NOT NULL,
+  zipcode         CHAR(40)     NOT NULL,
   city      CHAR(32)     NOT NULL,
+  state_id      CHAR(32)    NOT NULL,
   population      CHAR(32)     NOT NULL,
   density      CHAR(32)     NOT NULL,
   county_name      CHAR(32)     NOT NULL,
