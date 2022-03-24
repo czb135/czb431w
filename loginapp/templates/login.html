@@ -5,16 +5,16 @@
     <title>Login</title>
 </head>
 <body bgcolor="#E8E8E8 ">
-<div id = "head" style="width:400px;margin:auto;background-color:SlateGray ;">
+<div id = "head" style="width:400px;margin:auto;background-color:Tomato ;">
     <center>
-        <h1 style="margin-bottom:0">User Login</h1>
+        <h1 style="margin-bottom:0; color:whitesmoke">User Login</h1>
     </center>
 </div>
-<div id = "body" style="width:400px;margin:auto;height:250px;background-color:AliceBlue">
+<div id = "body" style="width:400px;margin:auto;height:250px;background-color:DodgerBlue">
     <form action="" method="post" style="padding-top:6px;padding-left:20px">
         {% csrf_token %}
-        <p style="height:0">Username:</p><br> <input type="text" name="user" style="width:300px;height:20px" required><br>
-        <p style="height:0">Password:</p><br> <input type="password" name="password" style="width:300px;height:20px" required>
+        <p style="height:0; color:whitesmoke" >Email:</p><br> <input type="text" name="user" style="width:300px;height:20px" required><br>
+        <p style="height:0; color:whitesmoke">Password:</p><br> <input type="password" name="password" style="width:300px;height:20px" required>
     <div class="submit-row" style="margin-top:30px">
             <input type="submit" value="Log in" style="width:100px;height:30px;margin-left:120px" name="submit">
     </div>
